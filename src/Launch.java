@@ -16,7 +16,7 @@ public class Launch {
 				break;
 			}
 			System.out.println("(" + playerList[firstPlayerIndex - 1] + ") - " + "Combien d'allumette voulez vous enlever ? (1 - 4) : ");
-			matchToSubstract = scanner.nextInt();
+			matchToSubstract = Verification.verifyNumberMatchesToSubstract(scanner, pileMatches);
 			pileMatches = pileMatches - matchToSubstract;
 			if(pileMatches == 0) {
 				System.out.println("Le joueur : " + playerList[firstPlayerIndex - 1] + " à perdu !");
@@ -29,7 +29,7 @@ public class Launch {
 				break;
 			}
 			System.out.println("(" + playerList[secondPlayerIndex - 1] + ") - " + "Combien d'allumette voulez vous enlever ? (1 - 4) : ");
-			matchToSubstract = scanner.nextInt();
+			matchToSubstract = Verification.verifyNumberMatchesToSubstract(scanner, pileMatches);
 			pileMatches = pileMatches - matchToSubstract;
 			if(pileMatches == 0) {
 				System.out.println("Le joueur : " + playerList[secondPlayerIndex - 1] + " à perdu !");
