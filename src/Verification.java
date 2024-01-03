@@ -38,18 +38,21 @@ public class Verification {
 		}
 		return userChoice;
 	}
+	
 	// Méthode qui viens vérifier la saisie du joueur pour savoir combien d'allumettes il y à a soustraire :
 	public static int verifyNumberMatchesToSubstract(Scanner scanner, int pileMatches) {
 		int userChoice;
 		while(true) {
 			if(scanner.hasNextInt()) {
 				userChoice = scanner.nextInt();
+				// Si il reste plus de 4 allumettes :
 				if(pileMatches > 4) {
 					if(userChoice < 1 || userChoice > 4) {
 						System.out.println("Veuillez saisir un choix correct (1 - 4) :");
 					}else {
 						break;
 					}
+				// Si il reste 4 allumettes ou moins :
 				}else {
 					if(userChoice < 1 || userChoice > pileMatches) {
 						System.out.println("Veuillez saisir un choix correct (1 - " + pileMatches + ")");
