@@ -24,7 +24,6 @@ public class Player {
 			System.out.println((i + 1) + " - " + playerList[i]);
 		}
 		
-		playerPlayFirst = scanner.nextInt();
-
+		playerPlayFirst = Verification.verifyWhoPlayFirst(scanner);
 	}
 }
